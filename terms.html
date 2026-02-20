@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CTO Swarm | Terms of Service</title>
+  <meta name="description" content="CTO Swarm is a peer community where startup CTOs help each other tackle challenges, share playbooks, and grow faster together." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="icon" href="img/favicon.png" type="image/png" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:        #1c2231;
+      --bg-dark:   #151c27;
+      --bg-card:   #222a3e;
+      --accent:    #FFD700;
+      --accent-dk: #e6c200;
+      --text:      #f0f0f5;
+      --text-muted:#8b8d9e;
+      --border:    #2e3a52;
+      --radius:    12px;
+    }
+
+    body {
+      font-family: 'Geist', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    ul { list-style: none; }
+
+    /* ── NAV ── */
+    header {
+      background: var(--bg);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 50;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 64px;
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 700;
+      font-size: 1.05rem;
+      color: var(--text);
+      flex-shrink: 0;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+    }
+
+    .nav-links a {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      font-weight: 500;
+      transition: color .15s;
+    }
+    .nav-links a:hover { color: var(--text); }
+
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .nav-login {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      font-weight: 500;
+      transition: color .15s;
+    }
+    .nav-login:hover { color: var(--text); }
+
+    .btn-nav {
+      background: var(--accent);
+      color: #111;
+      font-weight: 700;
+      font-size: 0.85rem;
+      padding: 8px 18px;
+      border-radius: 7px;
+      transition: background .15s;
+    }
+    .btn-nav:hover { background: var(--accent-dk); }
+
+    /* ── PROSE SECTION ── */
+    .prose-section {
+      padding: 72px 24px 96px;
+    }
+
+    .prose-wrap {
+      max-width: 760px;
+      margin: 0 auto;
+    }
+
+    .prose-header {
+      text-align: center;
+      margin-bottom: 56px;
+    }
+
+    .prose-title {
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      line-height: 1.1;
+      color: var(--text);
+      margin-bottom: 12px;
+    }
+
+    .prose-date {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+    }
+
+    .prose-block {
+      margin-bottom: 48px;
+    }
+
+    .prose-block h2 {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 14px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .prose-block p {
+      color: var(--text-muted);
+      line-height: 1.75;
+      margin-bottom: 14px;
+    }
+    .prose-block p:last-child { margin-bottom: 0; }
+
+    .prose-block ul {
+      list-style: disc;
+      padding-left: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      color: var(--text-muted);
+      line-height: 1.7;
+      margin-bottom: 14px;
+    }
+
+    .prose-block strong {
+      color: var(--text);
+      font-weight: 600;
+    }
+
+    .prose-block a {
+      color: var(--accent);
+      transition: opacity .15s;
+    }
+    .prose-block a:hover { opacity: 0.8; text-decoration: underline; }
+
+    .prose-closing {
+      margin-top: 56px;
+      padding-top: 28px;
+      border-top: 1px solid var(--border);
+      text-align: center;
+    }
+
+    .prose-closing p {
+      color: var(--text);
+      font-size: 1.05rem;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+
+    .prose-closing small {
+      font-size: 0.875rem;
+      color: var(--text-muted);
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--bg-dark);
+      border-top: 1px solid rgba(255,255,255,0.06);
+      padding: 56px 24px 32px;
+    }
+
+    .footer-top {
+      display: grid;
+      grid-template-columns: 1.6fr 1fr 1fr;
+      gap: 48px;
+      max-width: 1120px;
+      margin: 0 auto 48px;
+    }
+
+    .footer-brand-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 700;
+      font-size: 1.05rem;
+      color: var(--text);
+      margin-bottom: 12px;
+    }
+
+    .footer-brand p {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      line-height: 1.65;
+      max-width: 260px;
+    }
+
+    .footer-col h4 {
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 16px;
+    }
+
+    .footer-col ul {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .footer-col ul a {
+      font-size: 0.875rem;
+      color: var(--text-muted);
+      transition: color .15s;
+    }
+    .footer-col ul a:hover { color: var(--text); }
+
+    .footer-bottom {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding-top: 28px;
+      border-top: 1px solid rgba(255,255,255,0.06);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      text-align: center;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    .footer-bottom a { color: var(--text-muted); text-decoration: underline; }
+    .footer-bottom a:hover { color: var(--text); }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 680px) {
+      .nav-links  { display: none; }
+      .footer-top { grid-template-columns: 1fr; gap: 32px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ══ NAV ══ -->
+<header>
+  <nav>
+    <a href="index.html" class="nav-logo">
+      CTO <span style="color:var(--accent)">Swarm</span>
+    </a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="community.html">Community</a>
+      <a href="events.html">Events</a>
+      <a href="pricing.html">Pricing</a>
+    </div>
+    <div class="nav-right">
+      <a href="https://community.ctoswarm.com" class="nav-login">Login</a>
+      <a href="https://community.ctoswarm.com/join?invitation_token=c7b186d6b39fb5a4492eead2cf6bc38d85e262bc-19157cf7-b922-4ecd-8058-6e55d28a8402" class="btn-nav">Join Now</a>
+    </div>
+  </nav>
+</header>
+
+<!-- ══ TERMS OF SERVICE ══ -->
+<section class="prose-section">
+  <div class="prose-wrap">
+
+    <div class="prose-header">
+      <h1 class="prose-title">Terms of Service</h1>
+      <p class="prose-date">Last updated: January 2025</p>
+    </div>
+
+    <div class="prose-block">
+      <h2>Welcome to CTO Swarm</h2>
+      <p>Welcome to CTO Swarm, the private peer community for startup and scale-up CTOs. By joining our community, accessing our platform, or participating in our events, you agree to these Terms of Service. We've written these terms in plain language to make them as clear as possible.</p>
+    </div>
+
+    <div class="prose-block">
+      <h2>Who Can Join</h2>
+      <p>CTO Swarm membership is exclusively for practicing CTOs, technical co-founders, and senior technical leaders at startups and scale-up companies. To maintain the quality and relevance of our community:</p>
+      <ul>
+        <li>You must currently hold a CTO or equivalent technical leadership role</li>
+        <li>You must provide accurate information during the application process</li>
+        <li>We reserve the right to verify your eligibility and decline applications</li>
+        <li>Consultants, recruiters, and vendors are not eligible for membership</li>
+      </ul>
+    </div>
+
+    <div class="prose-block">
+      <h2>Your Account &amp; Access</h2>
+      <p>When you create an account with CTO Swarm:</p>
+      <ul>
+        <li>You're responsible for keeping your login credentials secure</li>
+        <li>You must not share your account access with others</li>
+        <li>You agree to notify us immediately of any unauthorized use</li>
+        <li>You're responsible for all activity that occurs under your account</li>
+      </ul>
+    </div>
+
+    <div class="prose-block">
+      <h2>Community Guidelines</h2>
+      <p>CTO Swarm is built on trust, respect, and confidentiality. All members must:</p>
+      <ul>
+        <li>Treat fellow members with respect and professionalism</li>
+        <li>Keep all discussions and shared information confidential</li>
+        <li>Refrain from spam, self-promotion, or sales pitches</li>
+        <li>Share knowledge and experiences to help fellow CTOs</li>
+        <li>Respect intellectual property and give credit where due</li>
+        <li>Report any violations of these guidelines to our team</li>
+      </ul>
+      <p>Violations of these guidelines may result in suspension or removal from the community.</p>
+    </div>
+
+    <div class="prose-block">
+      <h2>Membership Plans &amp; Payments</h2>
+      <p>CTO Swarm offers both free and paid membership options:</p>
+      <ul>
+        <li><strong>Community Access:</strong> Free access to our peer community, discussions, and select events</li>
+        <li><strong>Extended Membership:</strong> Paid access to premium content, exclusive workshops, and additional resources</li>
+        <li>Extended Membership is billed monthly via Stripe</li>
+        <li>You can cancel your Extended Membership at any time</li>
+        <li>Cancellations take effect at the end of your current billing period</li>
+        <li>No refunds for partial months, but you retain access until the end of your billing cycle</li>
+      </ul>
+    </div>
+
+    <div class="prose-block">
+      <h2>Money-Back Guarantee</h2>
+      <p>We stand behind the value of our Extended Membership. If you're not satisfied within the first 30 days of your Extended Membership, we'll provide a full refund. Simply <a href="mailto:hello@ctoswarm.com">contact us</a> to request a refund within this period.</p>
+    </div>
+
+    <div class="prose-block">
+      <h2>Events &amp; Content</h2>
+      <p>CTO Swarm provides various resources including workshops, AMAs, playbooks, and templates:</p>
+      <ul>
+        <li>All content and events are for members' personal and professional use only</li>
+        <li>You may not redistribute, resell, or share member-exclusive content</li>
+        <li>Recording of live events is prohibited without explicit permission</li>
+        <li>Playbooks and templates are provided as-is for your reference and adaptation</li>
+        <li>We retain intellectual property rights to all original CTO Swarm content</li>
+      </ul>
+    </div>
+
+    <div class="prose-block">
+      <h2>Third-Party Services</h2>
+      <p>CTO Swarm uses trusted third-party services to deliver our platform:</p>
+      <ul>
+        <li><strong>Circle.so:</strong> Our community platform for discussions and content sharing</li>
+        <li><strong>Stripe:</strong> Our payment processor for Extended Membership billing</li>
+        <li>These services have their own terms of service and privacy policies</li>
+        <li>We're not responsible for the availability or performance of third-party services</li>
+      </ul>
+    </div>
+
+    <div class="prose-block">
+      <h2>Limitation of Liability</h2>
+      <p>CTO Swarm facilitates peer-to-peer learning and knowledge sharing. While we strive to maintain a high-quality community:</p>
+      <ul>
+        <li>All advice and recommendations shared by members are their personal opinions</li>
+        <li>We're not liable for business decisions you make based on community discussions</li>
+        <li>You use all shared resources, templates, and advice at your own discretion</li>
+        <li>We make no warranties about the accuracy or completeness of shared content</li>
+        <li>Our liability is limited to the amount you've paid for Extended Membership</li>
+      </ul>
+    </div>
+
+    <div class="prose-block">
+      <h2>Account Termination</h2>
+      <p>Either party may terminate membership:</p>
+      <ul>
+        <li>You can cancel your membership at any time through your account settings</li>
+        <li>We reserve the right to suspend or terminate accounts that violate our guidelines</li>
+        <li>We may also terminate memberships if eligibility requirements are no longer met</li>
+        <li>Upon termination, you lose access to member-exclusive content and discussions</li>
+        <li>These Terms of Service survive termination where applicable</li>
+      </ul>
+    </div>
+
+    <div class="prose-block">
+      <h2>Changes to These Terms</h2>
+      <p>We may update these Terms of Service from time to time to reflect changes in our services or legal requirements. When we make significant changes:</p>
+      <ul>
+        <li>We'll post the updated terms on this page</li>
+        <li>We'll update the "Last updated" date at the top</li>
+        <li>For material changes, we'll notify members via email or community announcement</li>
+        <li>Continued use of CTO Swarm after changes constitutes acceptance of new terms</li>
+      </ul>
+    </div>
+
+    <div class="prose-block">
+      <h2>Questions About These Terms</h2>
+      <p>If you have any questions about these Terms of Service, please don't hesitate to reach out. You can <a href="mailto:hello@ctoswarm.com">contact us</a> and we'll be happy to clarify anything.</p>
+    </div>
+
+    <div class="prose-closing">
+      <p>By joining CTO Swarm, you agree to these Terms of Service.</p>
+      <small>Thank you for being part of our community of startup CTOs.</small>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══ FOOTER ══ -->
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <a href="index.html" class="footer-brand-logo">
+        CTO <span style="color:var(--accent)">Swarm</span>
+      </a>
+      <p>The community where startup CTOs learn, share, and succeed together.</p>
+    </div>
+
+    <div class="footer-col">
+      <h4>Platform</h4>
+      <ul>
+        <li><a href="index.html#benefits">Outcomes</a></li>
+        <li><a href="community.html">Community</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="community.html#faq">FAQ</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Connect</h4>
+      <ul>
+        <li><a href="mailto:hello@ctoswarm.com">Contact</a></li>
+        <li><a href="privacy.html">Privacy Policy</a></li>
+        <li><a href="terms.html">Terms of Service</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <span>© 2025 CTO Swarm. All rights reserved.</span>
+    <span>By using this site, you agree to our <a href="terms.html">Terms of Service</a> and <a href="privacy.html">Privacy Policy</a>.</span>
+  </div>
+</footer>
+
+</body>
+</html>

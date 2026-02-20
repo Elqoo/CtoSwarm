@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CTO Swarm | Privacy Policy</title>
+  <meta name="description" content="CTO Swarm is a peer community where startup CTOs help each other tackle challenges, share playbooks, and grow faster together." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="icon" href="img/favicon.png" type="image/png" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:        #1c2231;
+      --bg-dark:   #151c27;
+      --bg-card:   #222a3e;
+      --accent:    #FFD700;
+      --accent-dk: #e6c200;
+      --text:      #f0f0f5;
+      --text-muted:#8b8d9e;
+      --border:    #2e3a52;
+      --radius:    12px;
+    }
+
+    body {
+      font-family: 'Geist', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    ul { list-style: none; }
+
+    /* ── NAV ── */
+    header {
+      background: var(--bg);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 50;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 64px;
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 700;
+      font-size: 1.05rem;
+      color: var(--text);
+      flex-shrink: 0;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+    }
+
+    .nav-links a {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      font-weight: 500;
+      transition: color .15s;
+    }
+    .nav-links a:hover { color: var(--text); }
+    .nav-links a.active { color: var(--accent); }
+
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .nav-login {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      font-weight: 500;
+      transition: color .15s;
+    }
+    .nav-login:hover { color: var(--text); }
+
+    .btn-nav {
+      background: var(--accent);
+      color: #111;
+      font-weight: 700;
+      font-size: 0.85rem;
+      padding: 8px 18px;
+      border-radius: 7px;
+      transition: background .15s;
+    }
+    .btn-nav:hover { background: var(--accent-dk); }
+
+    /* ── PROSE SECTION ── */
+    .prose-section {
+      padding: 72px 24px 96px;
+    }
+
+    .prose-wrap {
+      max-width: 760px;
+      margin: 0 auto;
+    }
+
+    .prose-title {
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      line-height: 1.1;
+      color: var(--text);
+      margin-bottom: 12px;
+    }
+
+    .prose-date {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      margin-bottom: 56px;
+    }
+
+    .prose-block {
+      margin-bottom: 48px;
+    }
+
+    .prose-block h2 {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 14px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .prose-block p {
+      color: var(--text-muted);
+      line-height: 1.75;
+      margin-bottom: 14px;
+    }
+    .prose-block p:last-child { margin-bottom: 0; }
+
+    .prose-block ul {
+      list-style: disc;
+      padding-left: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      color: var(--text-muted);
+      line-height: 1.7;
+      margin-bottom: 14px;
+    }
+
+    .prose-block strong {
+      color: var(--text);
+      font-weight: 600;
+    }
+
+    .prose-block a {
+      color: var(--accent);
+      transition: opacity .15s;
+    }
+    .prose-block a:hover { opacity: 0.8; text-decoration: underline; }
+
+    .prose-footer-note {
+      margin-top: 56px;
+      padding-top: 28px;
+      border-top: 1px solid var(--border);
+      text-align: center;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--bg-dark);
+      border-top: 1px solid rgba(255,255,255,0.06);
+      padding: 56px 24px 32px;
+    }
+
+    .footer-top {
+      display: grid;
+      grid-template-columns: 1.6fr 1fr 1fr;
+      gap: 48px;
+      max-width: 1120px;
+      margin: 0 auto 48px;
+    }
+
+    .footer-brand-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 700;
+      font-size: 1.05rem;
+      color: var(--text);
+      margin-bottom: 12px;
+    }
+
+    .footer-brand p {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      line-height: 1.65;
+      max-width: 260px;
+    }
+
+    .footer-col h4 {
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 16px;
+    }
+
+    .footer-col ul {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .footer-col ul a {
+      font-size: 0.875rem;
+      color: var(--text-muted);
+      transition: color .15s;
+    }
+    .footer-col ul a:hover { color: var(--text); }
+
+    .footer-bottom {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding-top: 28px;
+      border-top: 1px solid rgba(255,255,255,0.06);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      text-align: center;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    .footer-bottom a { color: var(--text-muted); text-decoration: underline; }
+    .footer-bottom a:hover { color: var(--text); }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 680px) {
+      .nav-links  { display: none; }
+      .footer-top { grid-template-columns: 1fr; gap: 32px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ══ NAV ══ -->
+<header>
+  <nav>
+    <a href="index.html" class="nav-logo">
+      CTO <span style="color:var(--accent)">Swarm</span>
+    </a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="community.html">Community</a>
+      <a href="events.html">Events</a>
+      <a href="pricing.html">Pricing</a>
+    </div>
+    <div class="nav-right">
+      <a href="https://community.ctoswarm.com" class="nav-login">Login</a>
+      <a href="https://community.ctoswarm.com/join?invitation_token=c7b186d6b39fb5a4492eead2cf6bc38d85e262bc-19157cf7-b922-4ecd-8058-6e55d28a8402" class="btn-nav">Join Now</a>
+    </div>
+  </nav>
+</header>
+
+<!-- ══ PRIVACY POLICY ══ -->
+<section class="prose-section">
+  <div class="prose-wrap">
+
+    <h1 class="prose-title">Privacy Policy</h1>
+    <p class="prose-date">Last updated: January 2025</p>
+
+    <div class="prose-block">
+      <h2>Introduction</h2>
+      <p>At CTO Swarm, we respect your privacy and are committed to protecting your personal information. This Privacy Policy explains how we collect, use, and safeguard your data when you use our community platform and services.</p>
+    </div>
+
+    <div class="prose-block">
+      <h2>Information We Collect</h2>
+      <p>We collect information you provide directly to us, including:</p>
+      <ul>
+        <li>Name and email address when you join our community</li>
+        <li>Professional information such as job title and company</li>
+        <li>Account details and profile information</li>
+        <li>Community activity, including posts, comments, and participation in events</li>
+        <li>Communication preferences and feedback</li>
+        <li>Payment information for membership services (processed securely by our payment processor)</li>
+      </ul>
+    </div>
+
+    <div class="prose-block">
+      <h2>How We Use Your Information</h2>
+      <p>We use your information to:</p>
+      <ul>
+        <li>Provide access to our private community platform</li>
+        <li>Send event updates, newsletters, and community announcements</li>
+        <li>Process membership payments and manage your account</li>
+        <li>Facilitate connections with other community members</li>
+        <li>Improve our services and user experience</li>
+        <li>Respond to your questions and provide customer support</li>
+      </ul>
+    </div>
+
+    <div class="prose-block">
+      <h2>Sharing &amp; Third Parties</h2>
+      <p>We work with trusted third-party services to operate our community:</p>
+      <ul>
+        <li><strong>Circle.so:</strong> Our community platform provider that hosts member discussions and content</li>
+        <li><strong>Stripe:</strong> Our payment processor for handling membership transactions securely</li>
+        <li><strong>Email service providers:</strong> For sending community updates and communications</li>
+      </ul>
+      <p><strong>We do not sell your personal data.</strong> We only share information with these service providers as necessary to operate our community and process payments. All third parties are required to protect your information and use it only for the services they provide to us.</p>
+    </div>
+
+    <div class="prose-block">
+      <h2>Cookies &amp; Analytics</h2>
+      <p>We use cookies and similar technologies to improve your experience on our website. This includes analytics tools to understand how our site is used and to make improvements. You can control cookie settings through your browser preferences.</p>
+    </div>
+
+    <div class="prose-block">
+      <h2>Data Security</h2>
+      <p>We implement appropriate technical and organizational measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction. This includes secure data transmission, encrypted storage, and regular security assessments of our systems and third-party providers.</p>
+    </div>
+
+    <div class="prose-block">
+      <h2>Your Rights</h2>
+      <p>You have the right to:</p>
+      <ul>
+        <li>Access and review your personal information</li>
+        <li>Request correction of inaccurate data</li>
+        <li>Request deletion of your personal information</li>
+        <li>Opt out of marketing communications at any time</li>
+        <li>Export your data in a portable format</li>
+        <li>Withdraw consent for data processing where applicable</li>
+      </ul>
+    </div>
+
+    <div class="prose-block">
+      <h2>International Users</h2>
+      <p>For users in the European Union, we comply with the General Data Protection Regulation (GDPR). This includes providing clear consent mechanisms, honoring data subject rights, and ensuring lawful bases for processing your personal information. If you are located outside the United States, please note that your information may be transferred to and processed in the United States.</p>
+    </div>
+
+    <div class="prose-block">
+      <h2>Contact Us</h2>
+      <p>If you have questions about this Privacy Policy or how we handle your personal information, please <a href="mailto:hello@ctoswarm.com">contact us</a>. We're committed to addressing your privacy concerns promptly and transparently.</p>
+    </div>
+
+    <div class="prose-block">
+      <h2>Updates to This Policy</h2>
+      <p>We may update this Privacy Policy from time to time to reflect changes in our practices or legal requirements. When we make significant changes, we will notify you by posting the updated policy on our website and updating the "Last updated" date above. We encourage you to review this policy periodically.</p>
+    </div>
+
+    <p class="prose-footer-note">This Privacy Policy is effective as of the date listed above and applies to all users of CTO Swarm.</p>
+
+  </div>
+</section>
+
+<!-- ══ FOOTER ══ -->
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <a href="index.html" class="footer-brand-logo">
+        CTO <span style="color:var(--accent)">Swarm</span>
+      </a>
+      <p>The community where startup CTOs learn, share, and succeed together.</p>
+    </div>
+
+    <div class="footer-col">
+      <h4>Platform</h4>
+      <ul>
+        <li><a href="index.html#benefits">Outcomes</a></li>
+        <li><a href="community.html">Community</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="community.html#faq">FAQ</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Connect</h4>
+      <ul>
+        <li><a href="mailto:hello@ctoswarm.com">Contact</a></li>
+        <li><a href="privacy.html">Privacy Policy</a></li>
+        <li><a href="terms.html">Terms of Service</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <span>© 2025 CTO Swarm. All rights reserved.</span>
+    <span>By using this site, you agree to our <a href="terms.html">Terms of Service</a> and <a href="privacy.html">Privacy Policy</a>.</span>
+  </div>
+</footer>
+
+</body>
+</html>

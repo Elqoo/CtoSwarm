@@ -1,0 +1,841 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CTO Swarm | Pricing — Join Free or Go Extended</title>
+  <meta name="description" content="CTO Swarm is a peer community where startup CTOs help each other tackle challenges, share playbooks, and grow faster together." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="icon" href="img/favicon.png" type="image/png" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:        #1c2231;
+      --bg-dark:   #151c27;
+      --bg-card:   #222a3e;
+      --bg-card2:  #28324a;
+      --accent:    #FFD700;
+      --accent-dk: #e6c200;
+      --text:      #f0f0f5;
+      --text-muted:#8b8d9e;
+      --border:    #2e3a52;
+      --radius:    12px;
+    }
+
+    body {
+      font-family: 'Geist', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    img { display: inline-block; max-width: 100%; vertical-align: middle; }
+    ul { list-style: none; }
+
+    .container { max-width: 1120px; margin: 0 auto; padding: 0 24px; }
+
+    .accent { color: var(--accent); }
+
+    /* ── BUTTONS ── */
+    .btn-yellow {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      background: var(--accent);
+      color: #111;
+      font-weight: 700;
+      font-size: 0.95rem;
+      padding: 12px 24px;
+      border-radius: 8px;
+      border: none;
+      cursor: pointer;
+      transition: background .15s, transform .1s;
+      white-space: nowrap;
+      width: 100%;
+    }
+    .btn-yellow:hover { background: var(--accent-dk); transform: translateY(-1px); }
+
+    .btn-outline {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      background: transparent;
+      color: var(--text);
+      font-weight: 600;
+      font-size: 0.95rem;
+      padding: 12px 24px;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      cursor: pointer;
+      transition: background .15s, border-color .15s;
+      white-space: nowrap;
+      width: 100%;
+    }
+    .btn-outline:hover { background: var(--bg-card2); border-color: var(--text-muted); }
+
+    /* ── NAV ── */
+    header {
+      background: var(--bg);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 50;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 64px;
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 700;
+      font-size: 1.05rem;
+      color: var(--text);
+      flex-shrink: 0;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+    }
+
+    .nav-links a {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      font-weight: 500;
+      transition: color .15s;
+    }
+    .nav-links a:hover { color: var(--text); }
+    .nav-links a.active { color: var(--accent); }
+
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .nav-login {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      font-weight: 500;
+      transition: color .15s;
+    }
+    .nav-login:hover { color: var(--text); }
+
+    .btn-nav {
+      background: var(--accent);
+      color: #111;
+      font-weight: 700;
+      font-size: 0.85rem;
+      padding: 8px 18px;
+      border-radius: 7px;
+      transition: background .15s;
+      width: auto;
+    }
+    .btn-nav:hover { background: var(--accent-dk); transform: none; }
+
+    /* ── HEX PATTERN ── */
+    .hex-pattern {
+      background-color: var(--bg);
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='56' height='100'%3E%3Cpath d='M28 66L0 50V16L28 0l28 16v34z' fill='none' stroke='%23ffffff' stroke-opacity='0.04' stroke-width='1'/%3E%3Cpath d='M28 100L0 84V50l28-16 28 16v34zM56 34L28 18V-16l28-16 28 16v34zM0 34L-28 18V-16l28-16 28 16v34z' fill='none' stroke='%23ffffff' stroke-opacity='0.04' stroke-width='1'/%3E%3C/svg%3E");
+    }
+
+    /* ── SECTION SHARED ── */
+    .section-title {
+      font-size: clamp(1.6rem, 3vw, 2.25rem);
+      font-weight: 800;
+      letter-spacing: -.03em;
+      line-height: 1.2;
+      color: var(--text);
+    }
+
+    /* ── HERO ── */
+    .hero {
+      padding: 72px 24px 80px;
+      max-width: 760px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.2rem, 4.5vw, 3.5rem);
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      line-height: 1.1;
+      color: var(--text);
+      margin-bottom: 20px;
+    }
+
+    .hero-desc {
+      font-size: 1.1rem;
+      color: var(--text-muted);
+      max-width: 600px;
+      margin: 0 auto 28px;
+      line-height: 1.7;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255, 215, 0, 0.10);
+      border: 1px solid rgba(255, 215, 0, 0.20);
+      color: var(--accent);
+      font-size: 0.82rem;
+      font-weight: 500;
+      padding: 6px 16px;
+      border-radius: 100px;
+    }
+
+    .hero-badge svg { width: 16px; height: 16px; flex-shrink: 0; }
+
+    /* ── PLANS ── */
+    .plans-section {
+      padding: 80px 24px;
+      max-width: 1120px;
+      margin: 0 auto;
+    }
+
+    .plans-header {
+      text-align: center;
+      margin-bottom: 52px;
+    }
+
+    .plans-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    /* Free plan */
+    .plan-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 36px 32px;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      position: relative;
+    }
+
+    /* Featured plan */
+    .plan-card.featured {
+      border-color: rgba(255, 215, 0, 0.35);
+      background: linear-gradient(160deg, var(--bg-card) 60%, rgba(255,215,0,0.04) 100%);
+      box-shadow: 0 0 0 1px rgba(255,215,0,0.15), 0 8px 32px rgba(0,0,0,0.25);
+    }
+
+    .plan-label {
+      position: absolute;
+      top: -13px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--bg-card2);
+      border: 1px solid var(--border);
+      color: var(--text-muted);
+      font-size: 0.72rem;
+      font-weight: 600;
+      padding: 3px 14px;
+      border-radius: 100px;
+      white-space: nowrap;
+    }
+
+    .plan-card.featured .plan-label {
+      background: rgba(255, 215, 0, 0.15);
+      border-color: rgba(255, 215, 0, 0.30);
+      color: var(--accent);
+    }
+
+    .plan-name {
+      font-size: 1.35rem;
+      font-weight: 800;
+      color: var(--text);
+      margin-bottom: 4px;
+    }
+
+    .plan-tagline {
+      font-size: 0.875rem;
+      color: var(--text-muted);
+    }
+
+    .plan-price {
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+    }
+
+    .plan-price-amount {
+      font-size: 2.5rem;
+      font-weight: 800;
+      color: var(--text);
+      letter-spacing: -0.02em;
+    }
+
+    .plan-price-period {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    .plan-features {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      flex: 1;
+    }
+
+    .plan-feature {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+    }
+
+    .plan-feature-check {
+      width: 18px;
+      height: 18px;
+      flex-shrink: 0;
+      margin-top: 2px;
+      color: var(--accent);
+    }
+
+    .plan-feature span {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+
+    .plan-feature span strong {
+      color: var(--text);
+      font-weight: 600;
+    }
+
+    .plan-cta {
+      margin-top: auto;
+    }
+
+    .plan-note {
+      text-align: center;
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      margin-top: 10px;
+    }
+
+    .plans-footer {
+      text-align: center;
+      margin-top: 28px;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    /* ── FAQ ── */
+    .faq-section {
+      background: var(--bg-card);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      padding: 80px 24px;
+    }
+
+    .faq-container { max-width: 1120px; margin: 0 auto; }
+
+    .faq-header {
+      text-align: center;
+      margin-bottom: 12px;
+    }
+
+    .faq-subtitle {
+      text-align: center;
+      font-size: 1rem;
+      color: var(--text-muted);
+      margin-bottom: 6px;
+    }
+
+    .faq-sub2 {
+      text-align: center;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-bottom: 52px;
+    }
+
+    .faq-list {
+      max-width: 760px;
+      margin: 0 auto;
+    }
+
+    .faq-item {
+      border-bottom: 1px solid var(--border);
+    }
+    .faq-item:first-child { border-top: 1px solid var(--border); }
+
+    .faq-question {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 22px 0;
+      cursor: pointer;
+      gap: 16px;
+    }
+
+    .faq-question h3 {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--text);
+      line-height: 1.4;
+    }
+
+    .faq-chevron {
+      width: 20px;
+      height: 20px;
+      flex-shrink: 0;
+      color: var(--text-muted);
+      transition: transform .25s;
+    }
+
+    .faq-item.open .faq-chevron { transform: rotate(180deg); }
+
+    .faq-answer {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      line-height: 1.75;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height .35s ease, padding .25s ease;
+    }
+
+    .faq-item.open .faq-answer {
+      max-height: 300px;
+      padding-bottom: 22px;
+    }
+
+    /* ── CLOSING CTA ── */
+    .closing-cta {
+      background: var(--bg-dark);
+      padding: 96px 24px;
+      text-align: center;
+    }
+
+    .closing-cta h2 {
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      line-height: 1.12;
+      color: var(--text);
+      margin-bottom: 16px;
+    }
+
+    .closing-cta p {
+      font-size: 1.05rem;
+      color: var(--text-muted);
+      max-width: 560px;
+      margin: 0 auto 36px;
+      line-height: 1.7;
+    }
+
+    .closing-cta-actions {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .closing-cta .btn-yellow {
+      width: auto;
+      font-size: 1rem;
+      padding: 14px 32px;
+    }
+
+    .closing-secondary {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      font-weight: 500;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      transition: color .15s;
+    }
+    .closing-secondary:hover { color: var(--text); }
+
+    .closing-note {
+      margin-top: 20px;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--bg-dark);
+      border-top: 1px solid rgba(255,255,255,0.06);
+      padding: 56px 24px 32px;
+    }
+
+    .footer-top {
+      display: grid;
+      grid-template-columns: 1.6fr 1fr 1fr;
+      gap: 48px;
+      max-width: 1120px;
+      margin: 0 auto 48px;
+    }
+
+    .footer-brand-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 700;
+      font-size: 1rem;
+      color: var(--text);
+      margin-bottom: 12px;
+    }
+
+    .footer-brand p {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      line-height: 1.65;
+      max-width: 260px;
+    }
+
+    .footer-col h4 {
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 16px;
+    }
+
+    .footer-col ul {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .footer-col ul a {
+      font-size: 0.875rem;
+      color: var(--text-muted);
+      transition: color .15s;
+    }
+    .footer-col ul a:hover { color: var(--text); }
+
+    .footer-bottom {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding-top: 28px;
+      border-top: 1px solid rgba(255,255,255,0.06);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    .footer-bottom a { color: var(--text-muted); text-decoration: underline; }
+    .footer-bottom a:hover { color: var(--text); }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 680px) {
+      .nav-links  { display: none; }
+      .plans-grid { grid-template-columns: 1fr; }
+      .footer-top { grid-template-columns: 1fr; gap: 32px; }
+      .closing-cta-actions { flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ══ HEADER ══ -->
+<header>
+  <nav>
+    <a href="index.html" class="nav-logo">
+      <img src="image.png" alt="CTO Swarm" width="32" height="32" style="object-fit:contain;" />
+      CTO <span class="accent">Swarm</span>
+    </a>
+
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="community.html">Community</a>
+      <a href="events.html">Events</a>
+      <a href="pricing.html" class="active">Pricing</a>
+    </div>
+
+    <div class="nav-right">
+      <a href="https://community.ctoswarm.com" class="nav-login">Login</a>
+      <a href="https://community.ctoswarm.com/join?invitation_token=c7b186d6b39fb5a4492eead2cf6bc38d85e262bc-19157cf7-b922-4ecd-8058-6e55d28a8402" class="btn-nav">Join Now</a>
+    </div>
+  </nav>
+</header>
+
+<!-- ══ HERO ══ -->
+<section class="hex-pattern">
+  <div class="hero">
+    <h1>Pricing That Grows <span class="accent">With You</span></h1>
+    <p class="hero-desc">Join the Swarm free forever. Access events, discussions, and a vetted CTO network. Upgrade anytime for courses, frameworks, and 1-on-1 support.</p>
+    <span class="hero-badge">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/>
+      </svg>
+      Always free to join • Cancel anytime
+    </span>
+  </div>
+</section>
+
+<!-- ══ PLANS ══ -->
+<section>
+  <div class="plans-section">
+    <div class="plans-header">
+      <h2 class="section-title">Choose the Membership That <span class="accent">Fits You</span></h2>
+    </div>
+
+    <div class="plans-grid">
+
+      <!-- Free plan -->
+      <div class="plan-card">
+        <span class="plan-label">Great to get started</span>
+
+        <div>
+          <p class="plan-name">Community</p>
+          <p class="plan-tagline">Join the conversation and connect with fellow CTOs</p>
+        </div>
+
+        <div class="plan-price">
+          <span class="plan-price-amount">Free</span>
+          <span class="plan-price-period">Forever</span>
+        </div>
+
+        <ul class="plan-features">
+          <li class="plan-feature">
+            <svg class="plan-feature-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            <span>Access to private community discussions</span>
+          </li>
+          <li class="plan-feature">
+            <svg class="plan-feature-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            <span>Monthly CTO roundtables &amp; AMAs</span>
+          </li>
+          <li class="plan-feature">
+            <svg class="plan-feature-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            <span>Peer networking &amp; support</span>
+          </li>
+          <li class="plan-feature">
+            <svg class="plan-feature-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            <span>Basic resource library</span>
+          </li>
+        </ul>
+
+        <div class="plan-cta">
+          <a href="https://community.ctoswarm.com/join?invitation_token=c7b186d6b39fb5a4492eead2cf6bc38d85e262bc-19157cf7-b922-4ecd-8058-6e55d28a8402" class="btn-outline">Join Free Community</a>
+          <p class="plan-note">No credit card required</p>
+        </div>
+      </div>
+
+      <!-- Extended plan -->
+      <div class="plan-card featured">
+        <span class="plan-label">Best for growth-focused CTOs</span>
+
+        <div>
+          <p class="plan-name">Extended Membership</p>
+          <p class="plan-tagline">Everything in Community, plus exclusive courses and resources</p>
+        </div>
+
+        <div class="plan-price">
+          <span class="plan-price-amount">€25</span>
+          <span class="plan-price-period">/ month</span>
+        </div>
+
+        <ul class="plan-features">
+          <li class="plan-feature">
+            <svg class="plan-feature-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            <span><strong>Everything in Community, plus:</strong></span>
+          </li>
+          <li class="plan-feature">
+            <svg class="plan-feature-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            <span>Full Playbook &amp; Framework library</span>
+          </li>
+          <li class="plan-feature">
+            <svg class="plan-feature-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            <span>Exclusive CTO workshops &amp; masterclasses</span>
+          </li>
+          <li class="plan-feature">
+            <svg class="plan-feature-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            <span>Exclusive channels with senior CTOs</span>
+          </li>
+          <li class="plan-feature">
+            <svg class="plan-feature-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            <span>Priority event access</span>
+          </li>
+        </ul>
+
+        <div class="plan-cta">
+          <a href="https://community.ctoswarm.com/join?invitation_token=c7b186d6b39fb5a4492eead2cf6bc38d85e262bc-19157cf7-b922-4ecd-8058-6e55d28a8402" class="btn-yellow">Start Extended Membership</a>
+          <p class="plan-note">100% money-back guarantee</p>
+        </div>
+      </div>
+
+    </div>
+
+    <p class="plans-footer">Always free to join. Cancel anytime.</p>
+  </div>
+</section>
+
+<!-- ══ FAQ ══ -->
+<section class="faq-section">
+  <div class="faq-container">
+    <div class="faq-header">
+      <h2 class="section-title">Frequently Asked <span class="accent">Questions</span></h2>
+    </div>
+    <p class="faq-subtitle">Everything you need to know about CTO Swarm membership</p>
+    <p class="faq-sub2">Still unsure? Here are the most common questions we hear from CTOs.</p>
+
+    <div class="faq-list">
+
+      <div class="faq-item">
+        <div class="faq-question">
+          <h3>👥 Who can join CTO Swarm?</h3>
+          <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </div>
+        <div class="faq-answer">
+          CTO Swarm is exclusively for practicing CTOs and VP/Head of Engineering at startups and scale-ups. We vet every application to maintain a high-quality, peer-only environment — no consultants, salespeople, or recruiters. If you're actively leading engineering and dealing with the real challenges that come with it, this community is for you.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          <h3>🧑‍💻 Is CTO Swarm for teams or individuals?</h3>
+          <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </div>
+        <div class="faq-answer">
+          CTO Swarm memberships are individual. Each membership grants access to one person. We keep it this way to preserve the quality and trust of the community — every member is a vetted CTO, and that's what makes the conversations so valuable.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          <h3>⚖️ What's the difference between the Free Community and Extended Membership?</h3>
+          <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </div>
+        <div class="faq-answer">
+          The Free Community gives you full access to peer discussions, monthly roundtables, AMAs, and the basic resource library — everything you need to connect with fellow CTOs. Extended Membership builds on that with the full playbook and framework library, exclusive workshops and masterclasses, dedicated senior CTO channels, and priority access to events.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          <h3>📚 What exclusive resources are included in Extended Membership?</h3>
+          <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </div>
+        <div class="faq-answer">
+          Extended Members get access to the full Playbook &amp; Framework library — practical, ready-to-use guides written by experienced CTOs covering hiring, architecture decisions, team scaling, SOC 2, and more. You also get exclusive workshops and masterclasses, dedicated channels with senior CTOs, and priority registration for all events.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          <h3>🔄 Can I upgrade or downgrade my membership?</h3>
+          <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </div>
+        <div class="faq-answer">
+          Yes. You can upgrade from Free to Extended at any time from your account settings, and the change takes effect immediately. If you want to downgrade, you can do so from your settings — you'll retain Extended access until the end of your current billing period, then revert to Free.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          <h3>💳 Is there a money-back guarantee for CTO Swarm?</h3>
+          <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </div>
+        <div class="faq-answer">
+          Yes. Extended Membership comes with a 30-day money-back guarantee. If you're not satisfied within the first 30 days, contact us and we'll refund your payment in full — no questions asked.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          <h3>❌ Can I cancel CTO Swarm anytime?</h3>
+          <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </div>
+        <div class="faq-answer">
+          Absolutely. You can cancel your Extended Membership at any time from your account settings. You'll keep full access until the end of your current billing period, then automatically revert to the free Community tier — so you never lose your place in the community.
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══ CLOSING CTA ══ -->
+<section class="closing-cta">
+  <h2>Ready to Join the <span class="accent">Swarm</span>?</h2>
+  <p>Start with our free Community membership and connect with fellow CTOs solving the same challenges you face.</p>
+  <div class="closing-cta-actions">
+    <a href="https://community.ctoswarm.com/join?invitation_token=c7b186d6b39fb5a4492eead2cf6bc38d85e262bc-19157cf7-b922-4ecd-8058-6e55d28a8402" class="btn-yellow">Join Free Community</a>
+    <a href="community.html" class="closing-secondary">Learn More About CTO Swarm</a>
+  </div>
+  <p class="closing-note">Always free to join • Upgrade anytime • 30-day money-back guarantee</p>
+</section>
+
+<!-- ══ FOOTER ══ -->
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <a href="index.html" class="footer-brand-logo">
+        CTO <span class="accent">Swarm</span>
+      </a>
+      <p>The community where startup CTOs learn, share, and succeed together.</p>
+    </div>
+
+    <div class="footer-col">
+      <h4>Platform</h4>
+      <ul>
+        <li><a href="index.html#benefits">Outcomes</a></li>
+        <li><a href="community.html">Community</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="community.html#faq">FAQ</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Connect</h4>
+      <ul>
+        <li><a href="mailto:hello@ctoswarm.com">Contact</a></li>
+        <li><a href="privacy.html">Privacy Policy</a></li>
+        <li><a href="terms.html">Terms of Service</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <span>© 2025 CTO Swarm. All rights reserved.</span>
+    <span>By using this site, you agree to our <a href="terms.html">Terms of Service</a> and <a href="privacy.html">Privacy Policy</a>.</span>
+  </div>
+</footer>
+
+<script>
+  document.querySelectorAll('.faq-question').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      var item = btn.closest('.faq-item');
+      var isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item.open').forEach(function(el) {
+        el.classList.remove('open');
+      });
+      if (!isOpen) item.classList.add('open');
+    });
+  });
+</script>
+
+</body>
+</html>
